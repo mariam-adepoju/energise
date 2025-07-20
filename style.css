@@ -274,6 +274,9 @@ nav .menu-items {
   border: none;
   background: transparent;
 }
+.togglebtn i {
+  color: var(--black-color);
+}
 .minus-icon {
   display: none;
 }
