@@ -76,6 +76,12 @@ header {
 nav .menu-icon {
   display: none;
 }
+nav .menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: var(--sec-color);
+  margin: 6px 0;
+}
 nav .menu-items {
   display: flex;
 }
@@ -110,12 +116,6 @@ nav .menu-items {
 .hero-content p {
   width: 70%;
   margin-bottom: 20px;
-}
-.hero-img {
-  width: 100%;
-}
-.hero-img img {
-  width: 100%;
 }
 /* Discover Section */
 .discover {
@@ -298,4 +298,103 @@ footer {
 }
 .footer-text {
   text-align: center;
+}
+/* Tab View */
+@media screen and (max-width: 960px) {
+  /* hero section */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+/* Mobile view */
+@media screen and (max-width: 670px) {
+  .title {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  nav {
+    position: relative;
+  }
+  nav .menu-icon {
+    position: relative;
+    display: block;
+    z-index: 10;
+  }
+  nav .menu-items li {
+    margin: 0;
+    font-size: 20px;
+  }
+  nav .menu-items li:first-of-type {
+    margin-top: 100px;
+  }
+  nav .menu-items {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    z-index: 5;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+  }
+  nav .menu-items.sidebar {
+    right: 0;
+  }
+  nav .menu-items li {
+    padding: 20px;
+  }
+  /* Hero Section */
+  .hero-content {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-content p {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn-container a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .hero .container {
+    background: url(/images/hero-bg-mobile.png) no-repeat;
+    background-size: 350px 400px;
+    background-position: bottom;
+    height: 770px;
+  }
+  /* feedback Section */
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* price section */
+  .subscribe-plan .subtitle {
+    font-size: 1.1rem;
+  }
+  .subscribe-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-header h3 {
+    font-size: 1.9rem;
+  }
+  .card-header .price span {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .faqs-menu li {
+    font-size: 11px;
+  }
+  .accordion-item .header h4 {
+    font-size: 11px;
+  }
+  .accordion-item .content {
+    font-size: 11px;
+  }
+  .footer-text p {
+    font-size: 11px;
+  }
 }

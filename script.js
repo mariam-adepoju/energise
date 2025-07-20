@@ -1,9 +1,12 @@
 const accordionItems = document.querySelectorAll(".accordion-item");
+const menuIcon = document.getElementsByClassName("menu-icon")[0]
+const menuItems = document.getElementsByClassName("menu-items")[0]
 
+menuIcon.addEventListener("click", () => {
+    menuItems.classList.toggle("sidebar");
+})
 accordionItems.forEach(question => {
     const btn = question.querySelector(".togglebtn");
-    // console.log(question);
-    // console.log(btn);
     btn.addEventListener("click", () => {
         accordionItems.forEach(item => {
             if (item !== question) {
